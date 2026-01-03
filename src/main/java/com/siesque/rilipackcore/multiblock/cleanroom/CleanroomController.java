@@ -12,6 +12,7 @@ import com.siesque.rilipackcore.tag.RilipackcoreTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.Level;
@@ -31,7 +32,11 @@ public class CleanroomController extends BaseMultiblockController {
     private static final int MIN_WALL_HEIGHT = 3;
     private static final int MAX_WALL_HEIGHT = 7;
 
-    protected int lDist = 0, rDist = 0, bDist = 0, fDist = 0, hDist = 0;
+    protected int lDist = (MIN_SIZE - 1) / 2;
+    protected int rDist = (MIN_SIZE - 1) / 2;
+    protected int bDist = (MIN_SIZE - 1) / 2;
+    protected int fDist = (MIN_SIZE - 1) / 2;
+    protected int hDist = MIN_WALL_HEIGHT;
     protected CleanroomType cleanroomType = null;
     protected int cleanAmount;
 
@@ -225,6 +230,28 @@ public class CleanroomController extends BaseMultiblockController {
 
     public boolean isClean() {
         return this.cleanAmount >= CLEAN_AMOUNT_THRESHOLD;
+    }
+
+    @Override
+    public void save(CompoundTag tag) {
+        super.save(tag);
+        tag.putInt("lDist", lDist);
+        tag.putInt("rDist", rDist);
+        tag.putInt("fDist", fDist);
+        tag.putInt("bDist", bDist);
+        tag.putInt("hDist", hDist);
+        tag.putInt("cleanAmount", cleanAmount);
+    }
+
+    @Override
+    public void load(CompoundTag tag) {
+        super.load(tag);
+        this.lDist = tag.getInt("lDist");
+        this.rDist = tag.getInt("rDist");
+        this.fDist = tag.getInt("fDist");
+        this.bDist = tag.getInt("bDist");
+        this.hDist = tag.getInt("hDist");
+        this.cleanAmount = tag.getInt("cleanAmount");
     }
 
     @Override

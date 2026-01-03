@@ -1,6 +1,7 @@
 package com.siesque.rilipackcore.multiblock.pattern;
 
 import com.siesque.rilipackcore.multiblock.capability.IPartAbility;
+import com.siesque.rilipackcore.multiblock.controller.IMultiblockController;
 import com.siesque.rilipackcore.multiblock.part.IMultiPart;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
@@ -10,13 +11,11 @@ import net.minecraft.world.level.block.state.BlockState;
 import java.util.function.Supplier;
 
 public final class Predicates {
-    public static TraceabilityPredicate controller(Object controller) {
+    public static TraceabilityPredicate controller(IMultiblockController controller) {
         return new TraceabilityPredicate() {
             @Override
             public boolean test(IBlockWorldState state) {
-                // TODO: Will be implemented after IMultiblockController is created
-                // For now, compare position directly
-                return state.getBlockEntity() != null && controller != null;
+                return controller != null && state.getBlockEntity() == controller.getBlockEntity();
             }
 
             @Override
