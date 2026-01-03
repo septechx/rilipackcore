@@ -1,0 +1,7 @@
+// 1.20.1	2026-01-03T04:19:55.745062234	Loot Tables
+c1755a41953cd459605a8091142de492adfd09c3 data/rilipackcore/loot_tables/blocks/cleanroom_controller.json
+b97dc338e979bc75fc3f94f19819437b12210a48 data/rilipackcore/loot_tables/blocks/cleanroom_door.json
+605223bc82502183981c36e8f463fd5e2b6140f2 data/rilipackcore/loot_tables/blocks/cleanroom_filter.json
+80bdedeb6dbf3725553a851a1e5b0bd5a87b1308 data/rilipackcore/loot_tables/blocks/cleanroom_filter_sterile.json
+d75fe56bc36845b412b8c55df25dd900197acca1 data/rilipackcore/loot_tables/blocks/energy_input_hatch.json
+140e99ccaeedea688cd59afa6a04bdd96d50d2ed data/rilipackcore/loot_tables/blocks/plascrete_casing.json

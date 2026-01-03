@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "rilipackcore:block/energy_input_hatch",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "rilipackcore:block/energy_input_hatch",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "rilipackcore:block/energy_input_hatch",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "rilipackcore:block/energy_input_hatch",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "rilipackcore:block/energy_input_hatch"
+    },
+    "facing=west": {
+      "model": "rilipackcore:block/energy_input_hatch",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

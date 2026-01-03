@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "rilipackcore:block/cleanroom_filter"
+    }
+  }
+}

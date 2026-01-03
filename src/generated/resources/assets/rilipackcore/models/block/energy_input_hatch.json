@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "rilipackcore:block/plascrete_casing",
+    "side": "rilipackcore:block/plascrete_casing",
+    "top": "rilipackcore:block/energy_hatch"
+  }
+}

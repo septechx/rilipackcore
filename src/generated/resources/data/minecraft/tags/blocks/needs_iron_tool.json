@@ -1,0 +1,10 @@
+{
+  "values": [
+    "rilipackcore:cleanroom_door",
+    "rilipackcore:cleanroom_controller",
+    "rilipackcore:plascrete_casing",
+    "rilipackcore:cleanroom_filter",
+    "rilipackcore:cleanroom_filter_sterile",
+    "rilipackcore:energy_input_hatch"
+  ]
+}
